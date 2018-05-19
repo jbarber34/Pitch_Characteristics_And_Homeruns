@@ -34,7 +34,7 @@ Y17_All_Pitches$Hit_Quality_17[Y17_All_Pitches$in_play] <- Hit_Quality_Model_17$
 
 # Subset into just Fastballs
 Y17_Fastballs <- subset(Y17_All_Pitches, pitch_type == "FT" | pitch_type == "FF" 
-                        | pitch_type == "SI" | pitch_type ==  "FS" | pitch_type ==  "FC")
+                        | pitch_type == "SI" | pitch_type ==  "FC")
 
 #Logistic Regression Model of Fastball home run probability from pitch speed, location, and movement
 Pitch_Quality_Model_17 <- 
@@ -131,7 +131,7 @@ ggplot(Y17_BreakingBall, aes(release_spin_rate, Pitch_Quality_17, col = as.facto
        fill = "Pitch Zone")
 
 # Subset into Off Speed
-Y17_OffSpeed <- subset(Y17_All_Pitches, pitch_type == "CH")
+Y17_OffSpeed <- subset(Y17_All_Pitches, pitch_type == "CH" | pitch_type ==  "FS")
 
 #Logistic Regression Model of breaking ball home run probability from pitch speed, location, and movement
 Pitch_Quality_Model_17 <- 
@@ -210,7 +210,7 @@ Y16_All_Pitches$Hit_Quality_16[Y16_All_Pitches$in_play] <- Hit_Quality_Model_16$
 
 # Subset into just Fastballs
 Y16_Fastballs <- subset(Y16_All_Pitches, pitch_type == "FT" | pitch_type == "FF" 
-                        | pitch_type == "SI" | pitch_type ==  "FS" | pitch_type ==  "FC")
+                        | pitch_type == "SI" | pitch_type ==  "FC")
 
 #Logistic Regression Model of Fastball home run probability from pitch speed, location, and movement
 Pitch_Quality_Model_16 <- 
@@ -305,7 +305,7 @@ ggplot(Y16_BreakingBall, aes(release_spin_rate, Pitch_Quality_16, col = as.facto
        fill = "Pitch Zone")
 
 # Subset into Off Speed
-Y16_OffSpeed <- subset(Y16_All_Pitches, pitch_type == "CH")
+Y16_OffSpeed <- subset(Y16_All_Pitches, pitch_type == "CH" | pitch_type ==  "FS")
 
 #Logistic Regression Model of breaking ball home run probability from pitch speed, location, and movement
 Pitch_Quality_Model_16 <- 
